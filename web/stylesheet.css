@@ -1,0 +1,123 @@
+html{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+
+/* background */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 5000px;
+    overflow-y: scroll;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* 위치 가변 header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.top-header{
+    background-color: red;
+}
+
+.header{
+    background-color: green !important;
+}
+
+
+/* hover effect */
+.hover-test{
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    border-color: black;
+    background-color: yellow;
+    margin:auto;
+}
+
+/* class 뒤에 hover 붙이면 됨 */
+.hover-test:hover{
+    box-shadow: 5px 5px 5px 5px gray;
+    cursor: pointer;
+}
+
+/* overlay effect */
+.overlay-test{
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#overlay-image-close-button{
+    display: block;
+    position: fixed;
+    right: 0;
+    height: 5%;
+}
+
+#overlay-image-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay-image{
+    object-fit: scale-down;
+    height: 80%;
+    width: 80%;
+}
+
+/* carousel */
+#carousel-container-test{
+    width: 50%;
+    min-width: 500px;
+    height: 500px;
+    border: 1px solid;
+    border-color: black;
+    margin:auto;
+}
+
+/* change arrow size */
+.carousel-control-next-icon-1, .carousel-control-prev-icon-1 {
+    width: 10px;
+    height: 10px;
+    }
+
+.horizontal-scroll-test-container{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizontal-scroll-test-item{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+
+    flex: 0 0 auto;
+    margin: 0 auto;
+}
