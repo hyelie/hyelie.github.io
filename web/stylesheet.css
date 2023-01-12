@@ -1,8 +1,3 @@
-html{
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-}
-
 /* background */
 body{
     margin: 0;
@@ -15,24 +10,103 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-drag: none;
+
+    background-color: aliceblue;
+    font-family: 'Inter';
+    font-size: 18px;
+}
+
+:root{
+    --navy-blue: #0F2E6F;
+    --sky-blue: #C4D8FE;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* a tag 색 변화/밑줄 없애기 */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* 위치 가변 header */
-header{
+#header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px;
+    height: 86px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.top-header{
-    background-color: red;
+.header-scroll{
+    background-color: rgba(255, 255, 255, 0.55) !important;
 }
 
-.header{
-    background-color: green !important;
+.logo{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 30px;
+    height: auto;
+    color: var(--navy-blue);
 }
+
+.header-container{
+    width: 100%;
+    margin-left: 48px;
+    margin-right: 48px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation-element{
+    position: relative;
+    margin-left: 25px;
+
+    color: var(--navy-blue);
+}
+
+.navigation-element::after{
+    position: absolute;
+    display: block;
+    background-color: var(--sky-blue);
+
+    height: 4px;
+    width: 35px;
+    border-radius: 5px;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: all 500ms;
+}
+
+.navigation-element.on::after{
+    background-color: var(--navy-blue);
+}
+
+
 
 
 /* hover effect */
@@ -103,20 +177,29 @@ header{
 .horizontal-scroll-test-container{
     width: 500px;
     height: 500px;
-    background-color: red;
-    margin: auto;
+    background-color: gray;
+    margin: 0 auto;
 
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     overflow: auto;
     align-items: center;
-    justify-content: center;
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    cursor: grab;
+}
+
+.horizontal-scroll-test-container::-webkit-scrollbar{
+    display: none;
 }
 
 .horizontal-scroll-test-item{
+    background-color: white;
     width: 400px;
     height: 400px;
-    background-color: blue;
 
     flex: 0 0 auto;
     margin: 0 auto;
