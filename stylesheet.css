@@ -69,7 +69,7 @@ a:hover{
 
     z-index: 500;
 
-    transition: all 0.3s;
+    transition: color 0.3s;
 }
 
 .header-top{
@@ -112,6 +112,10 @@ a:hover{
     align-items: center;
 }
 
+#header .navigation-icon-container{
+    display: none;
+}
+
 #header .navigation-container{
     display: flex;
     gap: 37px;
@@ -151,11 +155,49 @@ a:hover{
     content: none;
 }
 
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1024px)*/
+@media all and (max-width:1024px) {
+    #header{
+        height: fit-content;
+    }
+
+    #header .navigation-container{
+        display: none;
+    }
+
+    #header .header-container{
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    #header .logo{
+        font-size: 22px;
+    }
+
+    #header .navigation-icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header .navigation-icon-container .navigation-icon{
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* 모바일 (해상도 0px ~ 768px)*/
+@media all and (max-width:768px) {
+    
+}
+
 /* section */
 .section{
     width: 100vw;
     height: fit-content;
-    min-height: 1080px;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -462,13 +504,11 @@ a:hover{
 #experience .workerbag-icon{
     height: 16px;
     width: 16px;
-    fill: var(--navy-blue);
 }
 
 #experience .teach-icon{
     height: 22px;
     width: 22px;
-    fill: var(--navy-blue);
 }
 
 #experience .university-icon{
@@ -1109,7 +1149,7 @@ a:hover{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    
+
     margin-top: 21px;
 }
 
@@ -1121,7 +1161,7 @@ a:hover{
 #contact .location-content{
     line-height: 1;
     font-size: 18px;
-    color: --black;
+    color: var(--black);
 }
 
 /* footer */
@@ -1180,7 +1220,7 @@ a:hover{
     margin-top: 13px;
 }
 
-#footer .navigation-list-container{
+#footer #navigation-list-container{
     display: flex;
     gap: 130px;
     flex-direction: row;
@@ -1212,6 +1252,53 @@ a:hover{
     font-size: 14px;
     font-weight: var(--inter-regular);
     line-height: 1;
+}
+
+/* navigation drawer */
+#header .navigation-drawer-overlay{
+    display: none;
+}
+
+.translateX-0{
+    transform: translateX(0%) !important;
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1024px)*/
+@media all and (max-width:1024px) {
+    #footer #navigation-list-container{
+        width: fit-content;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        transform: translateX(100%);
+        
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        background-color: var(--white);
+
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        z-index: 1001;
+
+        transition: all 0.5s;
+    }
+
+    #navigation-drawer-overlay{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        z-index: 1000;
+        display: none;
+    }
 }
 
 /* overlay effect */
