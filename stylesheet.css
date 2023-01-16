@@ -35,6 +35,15 @@ body{
     --inter-bold: 700;
 }
 
+/* 데스크탑 퍼스트 */
+
+/*
+PC (width 1024px ~ )
+테블릿 가로, 테블릿 세로 (width 768px ~ 1024px)
+모바일 (width 0px ~ 768px)
+*/
+/* PC (해상도 1024px ~ )*/
+
 /* a tag 색 변화/밑줄 없애기 */
 a{
     text-decoration: none;
@@ -46,7 +55,7 @@ a:hover{
     color: inherit;
 }
 
-/* global scale style class */
+/* global scale style class for animation */
 .scale-1{
     transform: scale(1) !important;
 }
@@ -155,7 +164,7 @@ a:hover{
     content: none;
 }
 
-/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1024px)*/
+/* width 1024px 이하 */
 @media all and (max-width:1024px) {
     #header{
         height: fit-content;
@@ -186,11 +195,6 @@ a:hover{
         width: 22px;
         height: 22px;
     }
-}
-
-/* 모바일 (해상도 0px ~ 768px)*/
-@media all and (max-width:768px) {
-    
 }
 
 /* section */
@@ -268,11 +272,11 @@ a:hover{
     align-items: center;
 }
 
-#home .button-left{
+#home .left-button{
     border-radius: 8px 0px 0px 8px;
 }
 
-#home .button-right{
+#home .right-button{
     border-radius: 0px 8px 8px 0px;
 }
 
@@ -289,6 +293,52 @@ a:hover{
 .sns-container .sns-element{
     width: 42px;
     height: auto;
+}
+
+/* width 1024px 이하 */
+@media all and (max-width:1024px) {
+    #home .name{
+        font-size: 67px;
+    }
+    
+    #home .role{
+        font-size: 33px;
+    }
+    
+    #home .description{
+        font-size: 18px;
+
+        margin-top:22px;
+    }
+    
+    #home .button-element{
+        width: 150px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    #home .button-container{
+  
+        margin-top: 28px;
+    }
+
+    .sns-container .sns-element{
+        width: 42px;
+    }
+}
+
+/* width 600px 이하 */
+@media all and (max-width:600px) {
+    #home .name{
+        font-size: 55px;
+    }
+}
+
+/* width 450px 이하 */
+@media all and (max-width:600px) {
+    #home .name{
+        font-size: 50px;
+    }
 }
 
 /* about */
@@ -311,9 +361,14 @@ a:hover{
 #about .information-container{
     display: flex;
     flex-direction: row;
-    gap: 86px;
+    gap: 70px;
     align-items: center;
     justify-content: center;
+}
+
+#about .picture{
+    width: 364px;
+    height: 364px;
 }
 
 #about .description-container{
@@ -345,8 +400,7 @@ a:hover{
     display: block;
     background-color: var(--blue);
     height: 3px;
-    min-width: 100%;
-    width: 75vw;
+    width: 85vw;
     border-radius: 10px 10px 10px 10px;
 
     margin-top: 79px;
@@ -354,11 +408,13 @@ a:hover{
 }
 
 #about .techstack{
+    width: 80vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 50px;
+    align-items: flex-start;
 }
 
 #about .check-icon{
@@ -381,6 +437,76 @@ a:hover{
     line-height: 1;
     font-size: 20px;
     font-weight: var(--inter-medium);
+}
+
+/* width 1080px 이하 */
+@media all and (max-width:1080px) {
+    #about .about-container{
+        justify-content: space-around;
+        height: fit-content;
+
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #about .about-header{
+        font-size: 55px;
+    }
+
+    #about .information-container{
+        flex-direction: column;
+        gap:15px;
+    }
+
+    #about .picture{
+        width: 260px;
+        height: 260px;
+    }
+
+    #about .about-header{
+        text-align: center;
+        width: 100%;
+    }
+
+    #about .description-content{
+        font-size: 16px;
+        width: 80vw;
+    }
+
+    #about .separate-bar{
+        height: 2px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    #about .techstack{
+        gap: 15px;
+        justify-content: flex-start;
+    }
+
+    #about .check-icon{
+        width: 18px;
+    }
+
+    #about .techstack-header{
+        font-size: 18px;
+    }
+    
+    #about .techstack-table{
+        border-spacing: 7px;
+    }
+    
+    #about .techstack-content{
+        font-size: 14px;
+    }
+}
+
+/* 720px 이하 */
+@media all and (max-width:720px) {
+    #about .picture{
+        width: 220px;
+        height: 220px;
+    }
 }
 
 /* experience */
@@ -421,6 +547,7 @@ a:hover{
 #experience .experience-list-container::before{
     position: absolute;
     width: 6px;
+    top: 0px;
     height: 120%;
     background-color: var(--blue);
     border-radius: 120px;
@@ -476,7 +603,7 @@ a:hover{
 }
 
 #experience .experience-icon-container{
-    width: 46px;
+    min-width: 46px;
     height: 46px;
 
     border-radius: 50%;
@@ -529,12 +656,12 @@ a:hover{
     transition: all 0.5s;
 }
 
-#experience .experience-company-container-right{
+#experience .right-experience-company-container{
     margin-right: 20px;
     justify-content: flex-end;
 }
 
-#experience .experience-company-container-left{
+#experience .left-experience-company-container{
     margin-left: 20px;
     justify-content: flex-start;
 }
@@ -544,22 +671,22 @@ a:hover{
     gap: 33px;
 }
 
-#experience .experience-content-container-right{
+#experience .right-experience-content-container{
     flex-direction: row;
 }
 
-#experience .experience-content-container-left{
+#experience .left-experience-content-container{
     flex-direction: row-reverse;
 }
 
 #experience .bubble-container{
-    max-width: 630px;
+    max-width: 550px;
     position: relative;
     border-radius: 20px;
     background-color: var(--pale-blue);
 
-    padding-left: 54px;
-    padding-right: 54px;
+    padding-left: 35px;
+    padding-right: 35px;
     padding-top: 29px;
     padding-bottom: 29px;
 
@@ -574,7 +701,7 @@ a:hover{
     transition: all 0.5s;
 }
 
-#experience .bubble-container-left::before{
+#experience .left-bubble-container::before{
     border-top: 90px solid var(--pale-blue);
     border-left: 0px solid transparent;
     border-right: 90px solid transparent;
@@ -583,9 +710,11 @@ a:hover{
     position: absolute;
     top: 0px;
     right: -45px;
+
+    z-index: -1;
 }
 
-#experience .bubble-container-right::before{
+#experience .right-bubble-container::before{
     border-top: 90px solid var(--pale-blue);
     border-left: 90px solid transparent;
     border-right: 0px solid transparent;
@@ -594,6 +723,8 @@ a:hover{
     position: absolute;
     top: 0px;
     left: -45px;
+
+    z-index: -1;
 }
 
 #experience .bubble-container .role{
@@ -648,6 +779,176 @@ a:hover{
     font-size: 18px;
 }
 
+/* width 1500px 이하 */
+@media all and (max-width:1500px) {
+    #experience .bubble-container{
+        max-width: 425px;
+    }
+
+    #experience .experience-list-container::before{
+        height: 115%;
+    }
+    
+    #experience .experience-list-container::after{
+        bottom: -15%;
+    }
+}
+
+/* width 1024px 이하 */
+@media all and (max-width:1024px) {
+    #experience .experience-header{
+        font-size: 55px;
+        margin-top: 100px;
+    }
+
+    #experience .experience-list-container{
+        align-items: flex-start;
+    }
+
+    #experience .experience-list-container::before{
+        height: 110%;
+        left: 50px;
+    }
+    
+    #experience .experience-list-container::after{
+        bottom: -10%;
+        left: 50px;
+    }
+    
+    #experience .experience-element{
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+
+    #experience .experience-content-container{
+        gap: 15px;
+    }
+
+    #experience .left-experience-element{
+        transform: translateX(0);
+    }
+
+    #experience .right-experience-element{
+        transform: translateX(0);
+    }
+
+    #experience .experience-company-container{
+        display: flex;
+        gap: 15px;
+        flex-direction: row;
+        align-items: center;
+    
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: var(--inter-bold);
+    
+        transform: scale(0);
+        transition: all 0.5s;
+    }
+
+    #experience .left-experience-company-container{
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    #experience .left-experience-icon-container{
+        position: relative;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    #experience .left-experience-content-container{
+        flex-direction: row;
+    }
+
+    #experience .bubble-container{
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #experience .left-bubble-container::before{
+        border-top: 90px solid var(--pale-blue);
+        border-left: 90px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        left: -20px;
+        right: 40px;
+    }
+
+    #experience .right-bubble-container::before{
+        left: -20px;
+    }
+
+    #experience .bubble-container .role{
+        font-weight: var(--inter-bold);
+        font-size: 21px;
+    }
+    
+    #experience .bubble-container .date{
+        font-size: 16px;
+    }
+
+    #experience .bubble-container .description{
+        font-size: 16px;
+    }
+
+    #experience .bubble-container .techtag{
+        font-size: 14px;
+    }
+
+    #experience .bubble-container .techstack-container{
+        margin-top: 12px;
+    }
+}
+
+/* width 720px 이하 */
+@media all and (max-width:720px) {
+    #experience .experience-list-container::before{
+        height: 105%;
+    }
+    
+    #experience .experience-list-container::after{
+        bottom: -5%;
+    }
+}
+
+/* width 600px 이하 */
+@media all and (max-width:600px) {
+    #experience .experience-icon-container{
+        min-width: 22px;
+        height: 22px;
+    }
+
+    #experience .workerbag-icon{
+        height: 10px;
+        width: 10px;
+    }
+    
+    #experience .teach-icon{
+        height: 12px;
+        width: 12px;
+    }
+    
+    #experience .university-icon{
+        height: 14px;
+        width: 14px;
+    }
+}
+
+/* width 720px 이하 */
+@media all and (max-width:400px) {
+    #experience .experience-list-container::before{
+        height: 103%;
+    }
+    
+    #experience .experience-list-container::after{
+        bottom: -3%;
+    }
+}
+
 /* achievement */
 #achievement{
     display: flex;
@@ -681,7 +982,7 @@ a:hover{
     font-weight: var(--inter-bold);
 }
 
-#achievement .achievement-seperate-bar{
+#achievement .achievement-separate-bar{
     background-color: var(--pale-blue);
     border-radius: 150px 150px 150px 150px;
     height: 9px;
@@ -689,7 +990,7 @@ a:hover{
 }
 
 #achievement .achievement-list-container{
-    width: 75vw;
+    width: 80vw;
     height: fit-content;
     margin: 0 auto;
 
@@ -747,7 +1048,7 @@ a:hover{
 
 #achievement .achievement-content-container{
     background-color: var(--pale-blue);
-    width: 311px;
+    width: 280px;
     height: 358px;
     border-radius: 15px;
 
@@ -783,7 +1084,7 @@ a:hover{
 
 #achievement .achievement-content-container .separate-bar{
     height: 1px;
-    width: 254px;
+    width: 85%;
     background-color: var(--blue);
     margin-top: 27px;
     
@@ -829,6 +1130,27 @@ a:hover{
     cursor: pointer;
 }
 
+/* width 1024px 이하 */
+@media all and (max-width:1024px) {
+    
+    #achievement .achievement-container{
+        margin-top: 100px;
+    }
+    #achievement .achievement-header-container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #achievement .achievement-header{
+        font-size: 45px;
+        text-align: center;
+    }
+
+    #achievement .achievement-separate-bar{
+        display: none;
+    }
+}
+
 /* project */
 #project{
     display: flex;
@@ -863,7 +1185,7 @@ a:hover{
     font-weight: var(--inter-bold);
 }
 
-#project .project-seperate-bar{
+#project .project-separate-bar{
     background-color: var(--pale-blue);
     border-radius: 150px 150px 150px 150px;
     height: 9px;
@@ -871,7 +1193,6 @@ a:hover{
 }
 
 #project .project-list-container{
-    width: 75vw;
     height: fit-content;
 
     display: flex;
@@ -886,10 +1207,10 @@ a:hover{
     border-radius: 20px;
     background-color: var(--pale-blue);
 
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
 
     display: flex;
     gap: 60px;
@@ -912,7 +1233,6 @@ a:hover{
 /* carousel */
 #project .carousel-container{
     z-index: 0;
-    width: 33vw;
     min-width: 600px;
     height: 464px !important;
     
@@ -934,7 +1254,7 @@ a:hover{
 
 #project .description-container{
     min-width: 600px;
-    height: 464px;
+    height: fit-content;
 
     display: flex;
     flex-direction: column;
@@ -1091,6 +1411,42 @@ a:hover{
     line-height: 1.2;
 }
 
+/* width 1500px 이하 */
+@media all and (max-width:1500px) {
+    #project .project-element{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+}
+
+/* width 1024px 이하 */
+@media all and (max-width:1024px) {
+    #project .project-header-container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #project .project-header{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #project .project-separate-bar{
+        display: none;
+    }
+
+    #project .carousel-container{
+        min-width: 500px;
+        height: 464px !important;
+    }
+
+    #project .carousel-container img{
+        object-fit: cover;
+        height: 464px !important;
+    }
+}
+
 /* contact */
 #contact {
     display: flex;
@@ -1136,7 +1492,7 @@ a:hover{
 }
 
 #contact .contact-description{
-    line-height: 1;
+    line-height: 1.2;
     font-size: 22px;
     color: var(--black);
     
@@ -1163,6 +1519,35 @@ a:hover{
     color: var(--black);
 }
 
+@media all and (max-width:1024px) {
+    #contact .contact-container{
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact .contact-header-container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact .contact-header{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #contact .separate-bar{
+        display: none;
+    }
+
+    #contact .contact-description{
+        font-size: 16px;
+    }
+
+    #contact .location-content{
+        font-size: 16px;
+    }
+}
+
 /* footer */
 #footer{
     height: 282px;
@@ -1176,13 +1561,12 @@ a:hover{
 }
 
 #footer .footer-container{
-    width: 57.5%;
     gap: 493px;
 
     margin-top: 34px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -1243,6 +1627,7 @@ a:hover{
 #footer .copyright{
     position: absolute;
     bottom: 5px;
+    width: fit-content;
     left: 50%;
     transform: translateX(-50%);
 
@@ -1262,7 +1647,7 @@ a:hover{
     transform: translateX(0%) !important;
 }
 
-/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1024px)*/
+/* width 1024px 이하 */
 @media all and (max-width:1024px) {
     #footer #navigation-list-container{
         width: fit-content;
@@ -1297,6 +1682,37 @@ a:hover{
 
         z-index: 1000;
         display: none;
+    }
+
+    #footer{
+        height: 230px;
+    }
+
+    #footer .footer-container{
+        margin-top: 22px;
+        justify-content: center;
+    }
+
+    #footer .information-container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer .name{
+        font-size: 28px;
+    }
+
+    #footer .copyright{
+        bottom: 8px;
+    }
+    
+    #footer .information-container .contact{
+        font-size: 16px;
+        color: var(--black);
+        line-height: 1;
+        font-weight: var(--inter-regular);
+    
+        margin-top: 13px;
     }
 }
 
