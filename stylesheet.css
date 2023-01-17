@@ -1820,7 +1820,8 @@ a:hover{
     
 
     #footer{
-        height: 230px;
+        height: auto;
+        background-color: transparent;
     }
 
     #footer .information-container .name{
