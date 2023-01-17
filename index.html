@@ -1004,7 +1004,7 @@
                 </div>
             </div>
 
-            <div id="navigation-list-container">
+            <div class="navigation-list-container">
                 <div class="navigation-container">
                     <div>
                         <a href="#home"><b>Menu</b></a>
@@ -1168,13 +1168,13 @@
         // open drawer
         function openNavigationDrawer(){
             document.querySelector('#navigation-drawer-overlay').style.display = "block";
-            document.querySelector('#footer #navigation-list-container').classList.add('translateX-0');
+            document.querySelector('#footer .footer-container').classList.add('translateX-0');
         }
 
         // close drawer
         function closeNavigationDrawer(){
             document.querySelector('#navigation-drawer-overlay').style.display = "none";
-            document.querySelector('#footer #navigation-list-container').classList.remove('translateX-0');
+            document.querySelector('#footer .footer-container').classList.remove('translateX-0');
         }
 
         /* 우클릭 막는 옵션 */
