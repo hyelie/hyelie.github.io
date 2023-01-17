@@ -819,6 +819,7 @@ a:hover{
     #experience .experience-element{
         margin-left: 50px;
         margin-bottom: 50px;
+        padding-right: 15px;
     }
 
     #experience .experience-content-container{
@@ -1204,6 +1205,10 @@ a:hover{
 }
 
 #project .project-element{
+    min-width: fit-content;
+    width: 80vw;
+    height: auto;
+
     box-shadow: 0px 4px 14px -2px;
     border-radius: 20px;
     background-color: var(--pale-blue);
@@ -1216,7 +1221,7 @@ a:hover{
     display: flex;
     gap: 60px;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
     transform: scale(0);
@@ -1234,8 +1239,8 @@ a:hover{
 /* carousel */
 #project .carousel-container{
     z-index: 0;
-    min-width: 600px;
-    height: 464px !important;
+    min-width: 33vw;
+    height: 464px;
     
     display: flex;
     justify-content: center;
@@ -1244,7 +1249,7 @@ a:hover{
 
 #project .carousel-container img{
     object-fit: cover;
-    height: 464px !important;
+    height: 464px;
 }
 
 /* change arrow size */
@@ -1255,6 +1260,7 @@ a:hover{
 
 #project .description-container{
     min-width: 600px;
+    width: fit-content;
     height: fit-content;
 
     display: flex;
@@ -1286,8 +1292,9 @@ a:hover{
     display: flex;
     gap: 7px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #project .description-container .tag{
@@ -1342,7 +1349,7 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #project .description-container .techstack-element .check-icon{
@@ -1367,7 +1374,8 @@ a:hover{
     flex-direction: row;
     gap: 12px;
     justify-content: flex-start;
-    align-items: center !important;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #project .description-container .techstack-element .techtag{
@@ -1409,7 +1417,7 @@ a:hover{
 
 #project .description-container .link-container .link-text{
     font-weight: var(--inter-bold);
-    line-height: 1.2;
+    font-size: 18px;
 }
 
 /* width 1500px 이하 */
@@ -1419,6 +1427,23 @@ a:hover{
         gap: 40px;
     }
 
+    #project .project-element{
+        width: fit-content;
+    }
+
+    #project .carousel-container{
+        min-width: 600px;
+        width: 50vw;
+        height: 464px;
+    }
+
+    #project .description-container img{
+        margin-top: 2px;
+    }
+
+    #project .description-container .type{
+        margin-top: 2px;
+    }
 }
 
 /* width 1024px 이하 */
@@ -1437,16 +1462,112 @@ a:hover{
         display: none;
     }
 
+    #project .project-element{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #project .description-container{
+        width: 500px;
+        min-width: 500px;
+    }
+
     #project .carousel-container{
         min-width: 500px;
-        height: 464px !important;
+        height: 350px;
     }
 
     #project .carousel-container img{
-        object-fit: cover;
-        height: 464px !important;
+        height: 350px;
+    }
+
+
+    #project .description-container .title{
+        font-size: 32px;
+    }
+
+    #project .description-container .subtitle{
+        font-size: 22px;
+    }
+
+    #project .description-container .tag{
+        font-size: 14px;
+    }
+
+    #project .description-container .content{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    #project .description-container .techissue{
+        margin-top: 0px;
+        font-size: 16px;
+    }
+
+    #project .description-container .techstack-element .check-icon{
+        width: 18px;
+        height: 18px;
+    }
+    
+    #project .description-container .techstack-element .type{
+        font-size: 18px;
+    }
+
+    #project .description-container .techstack-element .techstack-container{
+        margin-top: 15px;
+    }
+    
+    #project .description-container .techstack-element .techtag{
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        font-size: 14px;
+    }
+
+    #project .description-container .link-container .link-icon{
+        height: 20px;
+        width: 20px;
+    }
+    
+    #project .description-container .link-container .link-text{
+        font-size: 16px;
     }
 }
+
+/* 720px 이하 */
+@media all and (max-width:720px) {
+    #project .carousel-container{
+        min-width: 75vw;
+        height: 50vw;
+    }
+
+    #project .carousel-container img{
+        height: 50vw;
+    }
+
+    #project .project-element{
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 7vw;
+        padding-bottom: 7vw;
+    }
+
+    #project .description-container{
+        min-width: 75vw;
+        width: 75vw;
+    }
+
+    #project .description-container img{
+        margin-top: 1px;
+    }
+
+    #project .description-container .type{
+        margin-top: 1px;
+    }
+}
+
 
 /* contact */
 #contact {
@@ -1454,8 +1575,8 @@ a:hover{
     justify-content: center;
     align-items: center;
 
-    height: 75vh !important;
-    min-height: 75vh !important;
+    height: 80vh;
+    min-height: 80vh;
 }
 
 #contact .contact-container{
@@ -1628,7 +1749,7 @@ a:hover{
 #footer .copyright{
     position: absolute;
     bottom: 5px;
-    width: fit-content;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
 
