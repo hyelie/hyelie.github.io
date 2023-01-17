@@ -78,7 +78,7 @@ a:hover{
 
     z-index: 500;
 
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .header-top{
@@ -97,6 +97,10 @@ a:hover{
 .header-scroll{
     background-color: rgba(255, 255, 255, 0.55) !important;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header-hidden{
+    transform: translateY(-150%);
 }
 
 #header .logo{

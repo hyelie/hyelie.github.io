@@ -1076,6 +1076,8 @@
 
     <script>
         /* scroll height 감지 이벤트 */
+        const header = document.querySelector('#header');
+        let lastScrollY = 0;
         let homeY = document.querySelector('#home').offsetTop;
         let aboutY = document.querySelector('#about').offsetTop;
         let experienceY = document.querySelector('#experience').offsetTop;
@@ -1087,15 +1089,25 @@
             document.body.offsetHeight, document.documentElement.offsetHeight,
             document.body.clientHeight, document.documentElement.clientHeight
         );
-        // scroll 시 header 스타일 변경
-        function changeHeader() {
+        function changeHeader() {        
             let currentScrollY = window.pageYOffset; // 현 scroll 위치
             const navigationElements = document.querySelectorAll(".navigation-element");
 
+            // scroll 방향 감지 후 header 보여줄지 숨길지 결정
+            let isScrollDown = currentScrollY > lastScrollY;
+            lastScrollY = currentScrollY;
+            if(isScrollDown){
+                header.classList.add('header-hidden');
+            }
+            else{
+                header.classList.remove('header-hidden');
+            }
+
+            // scroll 위치에 따른 header style 변경
             if (currentScrollY == 0) { // scroll이 최상단일 때
                 // header 투명 + gradation 넣고 after css 삭제
-                document.querySelector('#header').classList.add('header-top');
-                document.querySelector('#header').classList.remove('header-scroll');
+                header.classList.add('header-top');
+                header.classList.remove('header-scroll');
 
                 navigationElements.forEach((element) => {
                     element.classList.add('off');
@@ -1103,8 +1115,8 @@
             }
             else { // scroll이 최상단이 아닐 때
                 // header 반투명 + gradation 삭제, after css 삭제
-                document.querySelector('#header').classList.remove('header-top');
-                document.querySelector('#header').classList.add('header-scroll');
+                header.classList.remove('header-top');
+                header.classList.add('header-scroll');
 
                 navigationElements.forEach((element) => {
                     element.classList.remove('off');
@@ -1128,8 +1140,7 @@
                 }
             }
         }
-        document.addEventListener('scroll', changeHeader, { passive: true });
-
+        document.addEventListener('scroll', changeHeader, { passive: false });
         // navigation 클릭 시 header after 색상 변경 
         function onNavigationClick(id) {
             const navigationElements = document.querySelectorAll(".navigation-element");
