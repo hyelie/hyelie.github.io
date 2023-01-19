@@ -21,7 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="style/index.css" type="text/css">
 </head>
 
 <body>
@@ -33,8 +33,7 @@
                 </a>
             </div>
             <div class="navigation-icon-container">
-                <img class="navigation-icon" src="./image/icon/menu.svg" 
-                onclick="openNavigationDrawer()" alt="menu">
+                <img class="navigation-icon" src="./image/icon/menu.svg" onclick="openNavigationDrawer()" alt="menu">
             </div>
             <div class="navigation-container">
                 <div class="navigation-element" id="navigation-home">
@@ -73,7 +72,7 @@
                 <a href="#contact" class="button-element left-button" onclick="onNavigationClick('navigation-contact')">
                     Contact
                 </a>
-                <a href="#contact" class="button-element right-button">
+                <a href="./pdfviewer.html" target="_blank" class="button-element right-button">
                     Download Résumé
                 </a>
             </div>
@@ -107,9 +106,10 @@
                         <br> <br>
                         지금은 군인이라 아무것도 못한다에요... 6월에 구글 인턴 뽑던데 지원도 못해서 너무 슬픈 것이에요... 본인은 과연 구글을 갈 수 있을 것인가!?
                         <br> <br>
-                        그래서 요새 매우매우 바쁘다에요~ 웹 포폴 다 만들면 코테 공부도 해야 하고 DB OS 아키텍처 네트워크 자바 스프링 자료구조 + 암호화 기본, Node.js, Docker, Kubernetes, ... 까마득하다에요~
+                        그래서 요새 매우매우 바쁘다에요~ 웹 포폴 다 만들면 코테 공부도 해야 하고 DB OS 아키텍처 네트워크 자바 스프링 자료구조 + 암호화 기본, Node.js,
+                        Docker, Kubernetes, ... 까마득하다에요~
                         <br> <br>
-                        그래도 빨리 전역이나 하고 취업이나                      하고싶다에요~ 빨리 1월 휴가가고 싶다에요~ 군대 너무너무 싫은 것이에요~
+                        그래도 빨리 전역이나 하고 취업이나 하고싶다에요~ 빨리 1월 휴가가고 싶다에요~ 군대 너무너무 싫은 것이에요~
                     </div>
                 </div>
             </div>
@@ -403,7 +403,8 @@
                                 검증하는 국가공인 자격증
                             </div>
                             <div class="button-container">
-                                <div class="detail-button" onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
+                                <div class="detail-button"
+                                    onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
                                     상세
                                 </div>
                             </div>
@@ -425,7 +426,8 @@
                                 학과 성적 우수 장학금
                             </div>
                             <div class="button-container">
-                                <div class="detail-button" onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
+                                <div class="detail-button"
+                                    onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
                                     상세
                                 </div>
                             </div>
@@ -447,7 +449,8 @@
                                 데이터베이스 SQL 국가공인 자격증
                             </div>
                             <div class="button-container">
-                                <div class="detail-button" onclick="openOverlay('./image/achievement/sqld.png', '정보처리기사')">
+                                <div class="detail-button"
+                                    onclick="openOverlay('./image/achievement/sqld.png', '정보처리기사')">
                                     상세
                                 </div>
                             </div>
@@ -471,10 +474,11 @@
                             </div>
                             <div class="button-container">
                                 <a class="detail-button" href="https://github.com/osamhack2022/APP_Meerkat_IQDan"
-                                target="_blank">Github</a>
-                            <div class="detail-button" onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
-                                상세
-                            </div>
+                                    target="_blank">Github</a>
+                                <div class="detail-button"
+                                    onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
+                                    상세
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -498,7 +502,8 @@
                             <div class="button-container">
                                 <a class="detail-button" href="https://github.com/hyelie/Pocarpool-Backend"
                                     target="_blank">Github</a>
-                                <div class="detail-button" onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
+                                <div class="detail-button"
+                                    onclick="openOverlay('./image/achievement/data.png', '정보처리기사')">
                                     상세
                                 </div>
                             </div>
@@ -520,10 +525,11 @@
             <div class="project-list-container">
                 <div class="project-element right-project-element">
                     <div class="carousel-container">
-                        <div id="project-meerkat" class="carousel carousel-dark slide " data-bs-ride="carousel" data-bs-interval="false">
+                        <div id="project-meerkat" class="carousel carousel-dark slide " data-bs-ride="carousel"
+                            data-bs-interval="false">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#project-meerkat" data-bs-slide-to="0" class="active"
-                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#project-meerkat" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#project-meerkat" data-bs-slide-to="1"
                                     aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#project-meerkat" data-bs-slide-to="2"
@@ -588,39 +594,57 @@
                         </ul>
                         <div class="techissue">
                             기술 고민 과정 -&nbsp;
-                            <a href="https://github.com/osamhack2022/APP_Meerkat_IQDan/wiki/%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B1%84%ED%8C%85" target="_blank">
+                            <a href="https://github.com/osamhack2022/APP_Meerkat_IQDan/wiki/%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B1%84%ED%8C%85"
+                                target="_blank">
                                 실시간 채팅에 관한 고찰 🔗
                             </a>
                         </div>
-                        <div class="techstack-container">
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Client</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">React Native</div>
-                                    <div class="techtag">Socket.io</div>
-                                    <div class="techtag">TypeScript</div>
-                                </div>
-                            </div>
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Server</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Node.ts</div>
-                                    <div class="techtag">Express</div>
-                                    <div class="techtag">MariaDB</div>
-                                    <div class="techtag">Docker</div>
-                                </div>
-                            </div>
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Coop</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Figma</div>
-                                    <div class="techtag">Github</div>
-                                </div>
-                            </div>
-                        </div>
+
+                        <table class="techstack-container">
+                            <tbody>
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Client</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">React Native</div>
+                                            <div class="techtag">Socket.io</div>
+                                            <div class="techtag">TypeScript</div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Server</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Node.ts</div>
+                                            <div class="techtag">Express</div>
+                                            <div class="techtag">MariaDB</div>
+                                            <div class="techtag">Docker</div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Coop</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Figma</div>
+                                            <div class="techtag">Github</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="link">
                             <div class="link-container">
                                 <a class="link-element"
@@ -631,7 +655,8 @@
                                         Demo
                                     </div>
                                 </a>
-                                <a class="link-element" href="https://github.com/osamhack2022/APP_Meerkat_IQDan" target="_blank">
+                                <a class="link-element" href="https://github.com/osamhack2022/APP_Meerkat_IQDan"
+                                    target="_blank">
                                     <img class="link-icon" src="./image/icon/github-thin.svg" alt="link">
                                     <div class="link-text">
                                         Github
@@ -643,10 +668,11 @@
                 </div>
                 <div class="project-element left-project-element">
                     <div class="carousel-container">
-                        <div id="project-bizkicks" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+                        <div id="project-bizkicks" class="carousel carousel-dark slide" data-bs-ride="carousel"
+                            data-bs-interval="false">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#project-bizkicks" data-bs-slide-to="0" class="active"
-                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#project-bizkicks" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#project-bizkicks" data-bs-slide-to="1"
                                     aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#project-bizkicks" data-bs-slide-to="2"
@@ -714,45 +740,63 @@
                         </ul>
                         <div class="techissue">
                             기술 고민 과정 -&nbsp;
-                            <a href="https://hyelie.tistory.com/entry/Spring-DTO%EC%99%80-Entity%EC%9D%98-%EB%B3%80%ED%99%98%EC%9D%80-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EB%84%88%EB%AC%B4-%EB%B3%B5%EC%9E%A1%ED%95%9C-Query%EC%9D%B8-%EA%B2%BD%EC%9A%B0-Overfetching-Underfetching" target="_blank">
+                            <a href="https://hyelie.tistory.com/entry/Spring-DTO%EC%99%80-Entity%EC%9D%98-%EB%B3%80%ED%99%98%EC%9D%80-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EB%84%88%EB%AC%B4-%EB%B3%B5%EC%9E%A1%ED%95%9C-Query%EC%9D%B8-%EA%B2%BD%EC%9A%B0-Overfetching-Underfetching"
+                                target="_blank">
                                 DTO, Entity 전환 위치에 관한 고찰 🔗
                             </a>
                         </div>
-                        <div class="techstack-container">
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Client</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Java</div>
-                                    <div class="techtag">Spring Boot</div>
-                                    <div class="techtag">MySQL</div>
-                                    <div class="techtag">Redis</div>
-                                </div>
-                            </div>
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">DevOps</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Docker</div>
-                                    <div class="techtag">Jenkins</div>
-                                    <div class="techtag">Kubernetes</div>
-                                    <div class="techtag">GCP</div>
-                                    <div class="techtag">GKE</div>
-                                </div>
-                            </div>
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Coop</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Figma</div>
-                                    <div class="techtag">Gitlab</div>
-                                    <div class="techtag">Notion</div>
-                                </div>
-                            </div>
-                        </div>
+                        <table class="techstack-container">
+                            <tbody>
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Client</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Java</div>
+                                            <div class="techtag">Spring Boot</div>
+                                            <div class="techtag">MySQL</div>
+                                            <div class="techtag">Redis</div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">DevOps</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Docker</div>
+                                            <div class="techtag">Jenkins</div>
+                                            <div class="techtag">Kubernetes</div>
+                                            <div class="techtag">GCP</div>
+                                            <div class="techtag">GKE</div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Coop</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Figma</div>
+                                            <div class="techtag">Gitlab</div>
+                                            <div class="techtag">Notion</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="link">
                             <div class="link-container">
-                                <a class="link-element" href="https://github.com/hyelie/SWM-Bizkicks-Backend" target="_blank">
+                                <a class="link-element" href="https://github.com/hyelie/SWM-Bizkicks-Backend"
+                                    target="_blank">
                                     <img class="link-icon" src="./image/icon/github-thin.svg" alt="link">
                                     <div class="link-text">
                                         Github
@@ -764,10 +808,11 @@
                 </div>
                 <div class="project-element right-project-element">
                     <div class="carousel-container">
-                        <div id="project-naver2tistory" class="carousel carousel-dark slide " data-bs-ride="carousel" data-bs-interval="false">
+                        <div id="project-naver2tistory" class="carousel carousel-dark slide " data-bs-ride="carousel"
+                            data-bs-interval="false">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#project-naver2tistory" data-bs-slide-to="0" class="active"
-                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#project-naver2tistory" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#project-naver2tistory" data-bs-slide-to="1"
                                     aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#project-naver2tistory" data-bs-slide-to="2"
@@ -779,19 +824,24 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="./image/project/naver2tistory/background1.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/naver2tistory/background1.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/naver2tistory/background1.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/naver2tistory/background1.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/naver2tistory/background2.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/naver2tistory/background2.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/naver2tistory/background3.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/naver2tistory/background3.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/naver2tistory/background4.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/naver2tistory/background4.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#project-naver2tistory"
@@ -827,21 +877,27 @@
                             <li>JSoup을 이용한 크롤링 및 html 파싱</li>
                             <li>javadoc을 이용한 <b>함수단위 명세</b></li>
                         </ul>
-                        <div class="techstack-container">
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Stack</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Java</div>
-                                    <div class="techtag">Github</div>
-                                </div>
-                            </div>
-                        </div>
+
+                        <table class="techstack-container">
+                            <tbody>
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Stack</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Java</div>
+                                            <div class="techtag">Github</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="link">
                             <div class="link-container">
                                 <a class="link-element"
-                                    href="https://github.com/hyelie/Naver2Tistory/releases/tag/v1.0.2"
-                                    target="_blank">
+                                    href="https://github.com/hyelie/Naver2Tistory/releases/tag/v1.0.2" target="_blank">
                                     <img class="link-icon" src="./image/icon/shortcut.svg" alt="link">
                                     <div class="link-text">
                                         Demo
@@ -859,10 +915,11 @@
                 </div>
                 <div class="project-element left-project-element">
                     <div class="carousel-container">
-                        <div id="project-pocarpool" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+                        <div id="project-pocarpool" class="carousel carousel-dark slide" data-bs-ride="carousel"
+                            data-bs-interval="false">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#project-pocarpool" data-bs-slide-to="0" class="active"
-                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#project-pocarpool" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#project-pocarpool" data-bs-slide-to="1"
                                     aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#project-pocarpool" data-bs-slide-to="2"
@@ -874,19 +931,24 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="./image/project/pocarpool/background1.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/pocarpool/background1.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/pocarpool/background1.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/pocarpool/background1.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/pocarpool/background2.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/pocarpool/background2.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/pocarpool/background3.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/pocarpool/background3.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./image/project/pocarpool/background4.png" class="d-block w-100" alt="...">
+                                    <img src="./image/project/pocarpool/background4.png" class="d-block w-100"
+                                        alt="...">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#project-pocarpool"
@@ -923,28 +985,41 @@
                             <li>엑셀을 이용한 API 명세</li>
                             <li>gitlab으로 issue, milestone 등 명세</li>
                         </ul>
-                        <div class="techstack-container">
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Server</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Node.js</div>
-                                    <div class="techtag">Express</div>
-                                    <div class="techtag">Socket.io</div>
-                                </div>
-                            </div>
-                            <div class="techstack-element">
-                                <img class="check-icon" src="./image/icon/check.svg" alt="check">
-                                <div class="type">Coop</div>
-                                <div class="techtag-container">
-                                    <div class="techtag">Excel</div>
-                                    <div class="techtag">Gitlab</div>
-                                </div>
-                            </div>
-                        </div>
+
+                        <table class="techstack-container">
+                            <tbody>
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Server</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Node.js</div>
+                                            <div class="techtag">Node.js</div>
+                                            <div class="techtag">Node.js</div>
+                                            <div class="techtag">Node.js</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="techstack-type">
+                                        <img class="check-icon" src="./image/icon/check.svg" alt="check">
+                                        <div class="type">Coop</div>
+                                    </td>
+                                    <td>
+                                        <div class="techtag-container">
+                                            <div class="techtag">Excel</div>
+                                            <div class="techtag">Gitlab</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="link">
                             <div class="link-container">
-                                <a class="link-element" href="https://gitlab.com/hyelie/carpool_backend" target="_blank">
+                                <a class="link-element" href="https://gitlab.com/hyelie/carpool_backend"
+                                    target="_blank">
                                     <img class="link-icon" src="./image/icon/gitlab-thin.svg" alt="link">
                                     <div class="link-text">
                                         Gitlab
@@ -1089,17 +1164,17 @@
             document.body.offsetHeight, document.documentElement.offsetHeight,
             document.body.clientHeight, document.documentElement.clientHeight
         );
-        function changeHeader() {        
+        function changeHeader() {
             let currentScrollY = window.pageYOffset; // 현 scroll 위치
             const navigationElements = document.querySelectorAll(".navigation-element");
 
             // scroll 방향 감지 후 header 보여줄지 숨길지 결정
             let isScrollDown = currentScrollY > lastScrollY;
             lastScrollY = currentScrollY;
-            if(isScrollDown){
+            if (isScrollDown) {
                 header.classList.add('header-hidden');
             }
-            else{
+            else {
                 header.classList.remove('header-hidden');
             }
 
@@ -1135,7 +1210,7 @@
                 else if (projectY <= currentScrollY && currentScrollY < contactY) {
                     onNavigationClick('navigation-project');
                 }
-                else{ // contactY <= currentScrollY
+                else { // contactY <= currentScrollY
                     onNavigationClick('navigation-contact');
                 }
             }
@@ -1166,13 +1241,13 @@
 
         /* mobile navigation drawer */
         // open drawer
-        function openNavigationDrawer(){
+        function openNavigationDrawer() {
             document.querySelector('#navigation-drawer-overlay').style.display = "block";
             document.querySelector('#footer .footer-container').classList.add('translateX-0');
         }
 
         // close drawer
-        function closeNavigationDrawer(){
+        function closeNavigationDrawer() {
             document.querySelector('#navigation-drawer-overlay').style.display = "none";
             document.querySelector('#footer .footer-container').classList.remove('translateX-0');
         }
@@ -1213,21 +1288,15 @@
 
         /* animation */
         // 화면에 들어오면 scale up to 1
-        let scaleObserver = new IntersectionObserver((entries)=>{
-            entries.forEach((entry)=>{
-                if(entry.isIntersecting){ // on screen
+        let scaleObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) { // on screen
                     entry.target.classList.add('scale-1');
                 }
-                else{
+                else {
                     entry.target.classList.remove('scale-1');
                 }
             });
-        });
-
-        // project element 관찰
-        let projectElements = document.querySelectorAll('.project-element');
-        projectElements.forEach((projectElement) => {
-            scaleObserver.observe(projectElement);
         });
 
         // experience element 관찰
@@ -1240,8 +1309,8 @@
         experienceBubbleElements.forEach((projectElement) => {
             scaleObserver.observe(projectElement);
         });
-        
-        
+
+
     </script>
 </body>
 
