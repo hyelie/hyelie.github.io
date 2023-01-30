@@ -168,6 +168,54 @@ a:hover{
     content: none;
 }
 
+#header .language-selection-button{
+    position: relative;
+
+    color: var(--navy-blue);
+    font-size: 16px;
+    font-weight: var(--inter-medium);
+}
+
+#header .language-selection-button::after{
+    display: inline-block;
+    margin-left: 0.25em;
+    vertical-align: 0.25em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+#header .language-selection-button ul{
+    list-style: none;
+}
+
+#header .language-selection-button:hover .language-dropdown{
+    display: block;
+}
+
+#header .language-dropdown{
+    display: none;
+    position: absolute;
+    right: 0px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+    background-color: var(--white);
+    box-shadow: 0px 5px 10px rgb(0 0 0 / 25%);
+}
+
+#header .language-dropdown:hover{
+    display: block;
+}
+
+#header .language-dropdown li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* width 1024px 이하 */
 @media all and (max-width:1024px) {
     #header{
@@ -771,7 +819,7 @@ a:hover{
 }
 
 #experience .bubble-container .techstack-container{
-    margin-top: 18px;
+    margin-top: 6px;
 
     display: flex;
     gap: 12px;
@@ -917,7 +965,7 @@ a:hover{
     }
 
     #experience .bubble-container .techstack-container{
-        margin-top: 12px;
+        margin-top: 0px;
     }
 }
 
@@ -1756,6 +1804,10 @@ a:hover{
     align-items: flex-start;
 }
 
+#footer .language-selector{
+    display: none !important;
+}
+
 #footer .navigation-container{
     display: flex;
     gap: 11px;
@@ -1804,10 +1856,12 @@ a:hover{
     }
 
     #footer .footer-container{
+        overflow-y: auto;
         width: 240px;
         height: 100%;
         margin-top: 0px;
         padding-top: 20px;
+        padding-bottom: 20px;
         top: 0px;
         right: 0px;
         transform: translateX(100%);
@@ -1830,6 +1884,10 @@ a:hover{
         flex-direction: column;
         gap: 25px;
         font-size: 16px;
+    }
+
+    #footer .language-selector{
+        display: flex !important;
     }
 
     #footer .navigation-container{
