@@ -71,6 +71,7 @@ li{
 
 li ul{
     margin-top: 1.5px;
+    margin-left: -10px;
 }
 
 /* 위치 가변 header */
@@ -896,6 +897,11 @@ li ul{
 
     #experience .experience-content-container{
         gap: 15px;
+    }
+
+    #experience .bubble-container{   
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     #experience .left-experience-element{
