@@ -753,7 +753,7 @@ li ul{
 }
 
 #experience .bubble-container{
-    max-width: 550px;
+    max-width: 610px;
     position: relative;
     border-radius: 20px;
     background-color: var(--pale-blue);
@@ -1429,7 +1429,8 @@ li ul{
 }
 
 #project .description-container .techstack-container .type{
-    width: 70px;
+    min-width: 70px;
+    width: fit-content;
     line-height: 1;
     font-weight: var(--inter-semibold);
     font-size: 20px;
