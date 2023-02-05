@@ -1220,6 +1220,16 @@
             document.body.offsetHeight, document.documentElement.offsetHeight,
             document.body.clientHeight, document.documentElement.clientHeight
         );
+
+        // navigation 클릭 시 header after 색상 변경 
+        function onNavigationClick(id) {
+            const navigationElements = document.querySelectorAll(".navigation-element");
+            navigationElements.forEach((element) => {
+                element.classList.remove('on');
+            })
+
+            document.querySelector("#" + id).classList.add('on');
+        }
         
         function changeHeader() {
             let currentScrollY = window.pageYOffset; // 현 scroll 위치
@@ -1275,15 +1285,6 @@
             }
         }
         document.addEventListener('scroll', changeHeader, { passive: false });
-        // navigation 클릭 시 header after 색상 변경 
-        function onNavigationClick(id) {
-            const navigationElements = document.querySelectorAll(".navigation-element");
-            navigationElements.forEach((element) => {
-                element.classList.remove('on');
-            })
-
-            document.querySelector("#" + id).classList.add('on');
-        }
 
         /* image overlay */
         // open overlay - imagePath: 이미지 경로, alt: 대체 텍스트
