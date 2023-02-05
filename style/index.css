@@ -435,14 +435,14 @@ li ul{
 }
 
 #about .picture{
-    width: 364px;
-    height: 364px;
+    width: 387px;
+    height: 387px;
 }
 
 #about .description-container{
     display: flex;
     flex-direction: column;
-    gap: 19px;
+    gap: 15px;
     justify-content: flex-start;
     align-items: flex-start;
 }
